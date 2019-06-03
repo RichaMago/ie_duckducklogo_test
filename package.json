@@ -1,0 +1,37 @@
+{
+  "name": "testcafe-cucumber",
+  "version": "0.1.0",
+  "description": "An integration of TestCafe and CucumberJS",
+  "author": "Ryan Quellhorst <rquellh@gmail.com>",
+  "contributors": [
+    "Chirag Masekar"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rquellh/testcafe-cucumber"
+  },
+  "scripts": {
+    "debug": "node --inspect=1337 --debug-brk --nolazy node_modules/cucumber/bin/cucumber-js --tags @debug --format json:./reports/report.json",
+    "test": "./node_modules/.bin/cucumber-js.cmd --tags @test --parallel 1 --format json:./reports/report.json",
+    "reports": "node ./assets/generate_reports_html.js",
+    "reports-teamcity": "node ./assets/generate_reports_teamcity.js"
+  },
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "cucumber": "^5.1.0",
+    "cucumber-json-to-teamcity": "^0.3.0",
+    "eslint": "^4.19.1",
+    "npm": "^6.9.0",
+    "testcafe": "^1.1.0",
+    "testcafe-reporter-cucumber-json": "^1.0.1",
+    "testcafe-reporter-teamcity": "^1.0.10",
+    "xpath-to-css": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1",
+    "multiple-cucumber-html-reporter": "^1.11.6",
+    "parallel-cucumber": "^1.1.0",
+    "testcafe-browser-provider-browserstack": "^1.8.0"
+  }
+}
